@@ -10,15 +10,15 @@ useEffect(() => {
     setOffset((prev) => {
       let next = prev + speed * direction;
 
-      // Lebar layar (misal 1400px, bisa sesuaikan)
+      // Lebar layar 
       const screenWidth = 1400;
 
-      // Kalau awan ke kanan
+      // awan ke kanan
       if (direction === 1 && next > screenWidth) {
         return -400; // muncul lagi dari kiri (diluar layar)
       }
 
-      // Kalau awan ke kiri
+      // awan ke kiri
       if (direction === -1 && next < -400) {
         return screenWidth; // muncul lagi dari kanan (diluar layar)
       }
